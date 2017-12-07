@@ -1,0 +1,16 @@
+- add test to package.json
+$npm install jest --save-dev
+
+ "scripts": {
+    "test": "jest",
+  },
+
+$npm test
+
+- add watch to package.json
+ "scripts": {
+    "test": "jest",
+    "watch": "jest --watch *.js"
+  },
+
+$npm run watch

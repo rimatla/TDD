@@ -30,16 +30,22 @@ describe('App', () => {
             //prevent test pollution from within both tests
             app.setState({gifts: []}); //enzyme feature
         });
+
         //allow to add new features
         it('adds a new gift to `state`', () => {
             expect(app.state().gifts).toEqual([{id: 1}]);
         });
 
-
         //adds new gifts to the list when clicking the addGift button
-        it('adds a new gift to view render list', () => {
+        it('adds a new gift to view rendered list', () => {
             //look up its child nodes
             expect(app.find('.gift-list').children().length).toEqual(1);
+        });
+
+        //Wire Gift component to App
+        it('creates a Gift Component', () => {
+            //true or false boolean
+            expect(app.find('Gift').exists()).toBe(true);
         });
     }); //describe addGift()
 

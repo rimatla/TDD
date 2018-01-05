@@ -17,8 +17,6 @@ ENZYME
 Is a test library created by Airbnb, which allows to test React Component and
 make assertions on how the components react to user behavior like typing into an input or clicking a button for instance.
 
-yarn add react-test-renderer react-dom --save-dev
-
 *************************
 BDD
 Behavior Driven Development is a variation of TDD that SPLITS the development of app features into user scenarios and behaviors that can affect the state of the app.

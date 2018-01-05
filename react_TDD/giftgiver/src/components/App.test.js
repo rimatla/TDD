@@ -18,6 +18,7 @@ describe('App', () => {
     });
 
     describe('When clicking the `addGift` button', () => {
+        const id = 1;
         //fires a code individually before each following test within this describe block
         beforeEach(() => {
             //find button and click it
@@ -33,7 +34,7 @@ describe('App', () => {
 
         //allow to add new features
         it('adds a new gift to `state`', () => {
-            expect(app.state().gifts).toEqual([{id: 1}]);
+            expect(app.state().gifts).toEqual([{id}]);
         });
 
         //adds new gifts to the list when clicking the addGift button
@@ -48,5 +49,17 @@ describe('App', () => {
             expect(app.find('Gift').exists()).toBe(true);
         });
     }); //describe addGift()
+
+    //remove a gift
+    describe('user wants to remove the added gift', () => {
+        const id = 1;
+        beforeEach(() => {
+            app.instance().removeGift(id);
+        });
+
+        it('removes the gift from `state`', () => {
+            expect(app.state().gifts).toEqual([])
+        });
+    });
 
 }); //describe App

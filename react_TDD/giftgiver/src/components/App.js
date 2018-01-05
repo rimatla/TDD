@@ -18,6 +18,14 @@ class App extends Component {
         //destructuring
         this.setState({ gifts });
     };
+
+    //remove a gift
+    removeGift = id => {
+        //filter gifts
+        const gifts = this.state.gifts.filter(gift => gift.id !== id);
+        this.setState({gifts});
+    };
+
     render() {
         return (
             <div>
@@ -26,7 +34,11 @@ class App extends Component {
                     {
                         this.state.gifts.map(gift => {
                             return (
-                                <Gift key={gift.id}/>
+                                <Gift
+                                    key={gift.id}
+                                    gift={gift}
+                                    removeGift={this.removeGift}
+                                />
                             )
                         })
                     }

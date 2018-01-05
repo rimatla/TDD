@@ -1,0 +1,14 @@
+- TDD is a style of coding where you not only CODE the features but also TEST those features beforehand (first).
+- Your code is DRIVEN by your test
+- Unit test is named as such because it looks for the the smallest part of your application as a unit and checks for proper behavior.
+
+1- Write a single unit test to describe aspects or features of your app
+2- Run the test and see if it fails (it should, since there's no feature yet)
+3- Then, Write the feature for the test to pass.
+4- Refactor the code to reduce duplication and so that it's composed to a minimum number of components, methods, lines, etc.
+5- Repeat process 1 to 4.
+
+Why TDD?
+- Adopting this style largely reduces errors and bugs
+- Leads to better code style
+- Greater degree of technical quality.

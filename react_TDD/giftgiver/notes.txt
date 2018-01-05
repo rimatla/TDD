@@ -1,0 +1,8 @@
+Run tests with:
+$ npm run test
+
+Update snapshot errors after modifying a component
+$ u
+
+To re-run all the tests
+$ a

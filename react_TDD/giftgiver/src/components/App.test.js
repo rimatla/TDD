@@ -18,19 +18,29 @@ describe('App', () => {
     });
 
     describe('When clicking the `addGift` button', () => {
-        //allow to add new features
-        it('adds a new gift to `state` when clicking the `add gift` button', () => {
+        //fires a code individually before each following test within this describe block
+        beforeEach(() => {
             //find button and click it
-            app.find('.btn-add').simulate('click');
+            app.find('.btn-add').simulate('click'); //removed duplicates from tests bellow
+        });
+
+        //make sure each test starts with a clean slate and is not polluted
+        afterEach(() => {
+            //reverse the effects of before each
+            //prevent test pollution from within both tests
+            app.setState({gifts: []}); //enzyme feature
+        });
+        //allow to add new features
+        it('adds a new gift to `state`', () => {
             expect(app.state().gifts).toEqual([{id: 1}]);
         });
 
+
         //adds new gifts to the list when clicking the addGift button
-        it('adds a new gift to view render list when clicking the addGift button', () => {
-            app.find('.btn-add').simulate('click');
+        it('adds a new gift to view render list', () => {
             //look up its child nodes
-            expect(app.find('.gift-list').children().length).toEqual(2); //prevent test pollution from test above this one
+            expect(app.find('.gift-list').children().length).toEqual(1);
         });
-    });
+    }); //describe addGift()
 
 }); //describe App

@@ -10,7 +10,7 @@ class Gift extends Component {
     //allow user to specify a user and a present
     render() {
         return (
-            <div>
+            <div className="gift">
                 <Form>
                     <FormGroup>
                         <ControlLabel>Person</ControlLabel>
@@ -30,7 +30,8 @@ class Gift extends Component {
                 <Button
                     className='btn-remove'
                     onClick={() => this.props.removeGift(this.props.gift.id)}
-                >Remove Gift
+                >
+                Remove Gift
                 </Button>
             </div>
         )

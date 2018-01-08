@@ -6,3 +6,14 @@ $ u
 
 To re-run all the tests
 $ a
+
+Run coverage report
+$ npm run test -- --coverage
+
+Modify package.json to ignore/coverage
+"jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js" (this is the ignoring part)
+    ]
+  },

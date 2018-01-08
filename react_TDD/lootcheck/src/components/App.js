@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
+import Wallet from './Wallet';
 
 class App extends Component {
-  constructor(props) {
-      super(props);
-       this.state = {appState: ''};
-  }
-  //define render method
   render() {
       return (
           <div>
               <h2>Loot Check</h2>
+              <hr/>
+              <Wallet />
           </div>
       )
   }

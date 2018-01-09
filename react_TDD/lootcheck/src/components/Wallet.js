@@ -4,10 +4,10 @@ import { deposit, withdraw }  from '../actions/balance';
 
 //export individually
 export class Wallet extends Component {
-  // constructor() {
-  //     super();
-  //     this.state = { balance: undefined};
-  // }
+  constructor() {
+      super();
+      this.state = { balance: undefined};
+  }
   updateBalance = e => {
       return this.setState({balance: parseInt(e.target.value, 10)})
   };

@@ -13,4 +13,8 @@ describe('App', () => {
         //console.log(app.debug());
         expect(app.find('Connect(Wallet)').exists()).toBe(true);
     });
+
+    it('conatains a connected Loot component', () => {
+        expect(app.find('Connect(Loot)').exists()).toBe(true);
+    });
 });

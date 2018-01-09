@@ -9,6 +9,7 @@
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "sfcookies": "^1.0.2"
   },
   "scripts": {
@@ -19,8 +20,10 @@
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
+    "fetch-mock": "^6.0.0-beta.7",
     "jest-cli": "^20.0.4",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "redux-mock-store": "^1.4.0"
   },
   "transformIgnorePatterns": [
     "node_modules/(?!(jest-test))"

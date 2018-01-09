@@ -35,4 +35,9 @@ export class Wallet extends Component {
 }
 
 //connect component to redux store
-export default connect(state =>{return {balance: state}}, {deposit, withdraw})(Wallet);
+export default connect(state =>{return {balance: state.balance}}, {deposit, withdraw})(Wallet);
+
+//fixes error:
+/*
+Objects are not valid as a React child (found: object with keys {balance, bitcoin}). If you meant to render a collection of children, use an array instead.
+ */

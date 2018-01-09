@@ -1,3 +1,5 @@
 ***** Browser Cookies
+- Cookies allow us to store information on the user’s browser with a unique string.
+
 - We can store data on the browser according to a specific 'key' that we provide for our app
 to connect to the cookies in the reducer layer.

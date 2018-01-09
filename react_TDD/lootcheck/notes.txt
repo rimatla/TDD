@@ -3,3 +3,5 @@
 
 - We can store data on the browser according to a specific 'key' that we provide for our app
 to connect to the cookies in the reducer layer.
+
+https://github.com/15Dkatz/react-tdd

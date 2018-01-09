@@ -20,3 +20,8 @@ it('creates an async action to fetch the bitcoin value', () => {
         expect(store.getActions()).toEqual(expectedActions);
     })
 });
+
+
+    /*
+    Fetch-Mock mocks the native fetch() method of JavaScript in the testing environment by stubbing http endpoints.
+     */

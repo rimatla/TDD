@@ -71,4 +71,3 @@ describe('Async Await', () => {
         expect(data.name).toEqual('Leanne Graham')
     })
 })
-

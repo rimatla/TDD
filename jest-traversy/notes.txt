@@ -1,0 +1,19 @@
+- start a project
+$ npm init -y
+
+- jest
+$ npm i -D jest
+
+- test
+$ npm test
+
+- watch
+$ npm run watch
+
+-- watch single suite
+$ jest file_name --watch 
+
+- Config test environment to get rid of unnecessary objects from window, when  processing tests and allocating memory,
+ "jest": {
+    "testEnvironment": "node"
+  }

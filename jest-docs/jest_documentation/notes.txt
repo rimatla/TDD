@@ -1,1 +1,46 @@
+- To run tests:
 $ jest file_name
+
+***************************************************************************************************************
+add test to package.json
+$npm install jest --save-dev
+
+ "scripts": {
+    "test": "jest",
+  },
+
+$npm test
+
+***************************************************************************************************************
+add watch to package.json
+ "scripts": {
+    "test": "jest",
+    "watch": "jest --watch *.js"
+  },
+
+$npm run watch
+
+***************************************************************************************************************
+Config test environment to get rid of unnecessary objects from window, when  processing tests and allocating memory,
+ "jest": {
+    "testEnvironment": "node"
+  }
+
+***************************************************************************************************************
+Run single tests within a file directory
+- Install jest globally
+$npm install -g jest
+$ jest file-name.test.js
+
+or
+$jest --watch
+
+***************************************************************************************************************
+In Jest it's simple to run only one test - just temporarily change that test command to a test.only:
+test.only('this will be the only test that runs', () => {
+    expect(true).toBe(false);
+});
+
+test('this test will not run', () => {
+    expect('A').toBe('A');
+});
